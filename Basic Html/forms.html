@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Form</title>
+</head>
+<body>
+    <form action="/action"><br>
+        <div>
+            <label for="Username">
+                UserName:   
+            </label>
+            <input type="text" id="Username" placeholder="Enter your name" name="Username">
+        </div>      
+            
+        <div>
+            <label for="Password">
+                Password:
+            </label>
+    
+            <input type="password" id="Password" placeholder="Enter your password" name="pass">
+        </div>
+        
+        <div>
+            <label for="Email">
+                Email:          
+            </label>  
+             
+            <input type="email" id="Email" placeholder="Enter your email">
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button">Hello</button>
+        <button type="reset">Reset</button>
+        <input type="button" value="Click me">
+        
+        <input type="checkbox" name="age" id="age">
+        <label for="age">I am 18+</label><br>
+
+        <input type="radio" name="fruit" id="apple">
+        <label for="apple">Apple</label>
+
+        <input type="radio" name="fruit" id="Mango">
+        <label for="Mango">Mango</label>
+
+        <input type="radio" name="fruit" id="Banana">
+        <label for="Banana">Banana</label>
+        <br>
+        <input type="checkbox" name="check" id="male">
+        <label for="male">Male</label>
+        <input type="checkbox" name="check" id="female">
+        <label for="female">Female</label><br>
+        <!-- multiple option (dropdown) -->
+         <div>
+            Choose your option
+            <select name="profession" id="profession">
+                <option>Please Choose</option>
+                <option value="Student">Student</option>
+                <option value="Developer">Developer</option>
+                
+            </select>       
+         </div>
+         <!-- select in unknow range -->
+          <div>
+            <label for="range">Select your volume level:</label>
+            <input type="range" min="0" max="100" id="range" name="Volume" step="5" >
+            <button>Submit</button>
+            
+          </div>
+          <div>
+            <label for="feedback">Please comment</label>
+            <textarea name="feedback" id="feedback" rows="5" cols="40" placeholder="Write your feedback here."></textarea>
+            <button>Submit</button>
+          </div>
+    </form>
+    
+</body>
+</html>

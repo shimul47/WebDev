@@ -1,0 +1,28 @@
+#container{
+    height:600px;
+    width:80%;
+    background-color :azure;
+    /* here i add a line */
+    margin: 10px auto;
+    border:2px solid black;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+    align-items: flex-start;
+    flex:auto;
+
+}
+h1{
+    text-align: center;
+}
+#container div{
+    border:2px solid black;
+    margin:20px;
+    height: 100px;
+    width:100px;
+    color:white;
+    
+    text-align: center;
+
+}

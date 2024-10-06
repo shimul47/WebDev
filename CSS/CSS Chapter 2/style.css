@@ -1,0 +1,67 @@
+h1{
+    color: #b92b27;
+}
+#login{
+    background-color: white;
+}
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+.upvote{
+    background-color: green;
+    color: white;
+}
+.post a {
+    
+    color: purple;
+}
+.gg ul{
+    color: pink;
+}
+.gg a{
+    text-decoration: none;
+    color: rgb(7, 120, 120);
+}
+p + h3{
+    text-decoration: underline;
+}
+.upvote + button{
+    background-color: rgb(96, 96, 250);
+    color: white;
+}
+div > input{
+    background-color: darkgray;
+    color: darksalmon;
+}
+input[type="text"]{
+    color: red;
+}
+input[type="password"]{
+    color: green;
+}
+#myid p{
+    color:green;
+}
+button:hover{
+    
+    color: white;
+}
+button:active{
+    color:aquamarine;
+}
+h3:hover{
+    text-decoration: none;
+}
+p:active{
+    font-weight: bold;
+}
+input[type="radio"]:checked + label{
+    font-weight: bold;
+    color: red;
+}
+div:nth-of-type(2n){
+    color: red;
+    background-color: antiquewhite;
+}
+/* learn more psudocode */
