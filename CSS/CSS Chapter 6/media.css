@@ -1,0 +1,15 @@
+h1{
+    background-color: yellow;
+}
+@media(max-width:400px){
+    h1{
+    background-color: red;
+    color:white;
+    }
+}
+@media(orientation:landscape){
+    h1{
+        background-color: aqua;
+        color:brown;
+    }
+}

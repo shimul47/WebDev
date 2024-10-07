@@ -1,0 +1,52 @@
+
+.container{
+    margin:auto;
+    width:600px;
+    height:300px;
+    background-color: azure;
+    display:inline-grid;
+    /* grid-template-rows:auto auto auto auto;
+    grid-template-columns: auto auto auto auto; */
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(5,1fr);
+    /* grid-gap:rowgap colgap; */
+    grid-gap:5px 5px;
+    justify-items:center;
+    align-items: start;
+}
+.item{
+    width:100px;
+    height:57px;
+    background-color: greenyellow;
+    border: 2px solid black;
+}
+/* #check{
+    grid-column: 2/span 2;
+    justify-self: end;
+} */
+
+.box{
+    height:120px;
+    width:200px;
+    background-color: pink;
+    animation-name:fontanimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation: name duration timing-function delay iteration-count direction; */
+}
+@keyframes fontanimation{
+    from{
+        font-size:20px;
+        background-color: pink;
+        width:50px;
+    }
+    to{
+        font-size:50px;
+        background-color: yellow;
+        width:200px;
+        border-radius: 5%;
+    }
+}
