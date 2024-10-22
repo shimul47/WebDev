@@ -85,4 +85,48 @@ console.log(max2);
 function sum1(a,b=5){
     return a+b;
 }
-console.log(sum1(3,6));
+console.log(sum1(3));
+
+//spread concept -- Expands an iterable into multiple values
+arr6 = [1,2,3,4,5,6,7,8,4,3,2343,5,43,534,43];
+console.log(Math.min(...arr6)); // Have to use 3 dots in JS
+console.log(Math.max(...arr6));
+console.log(...arr);//will print individual number like for loop
+
+let chars = ["a","b","c","d","e"];
+let newChars =[...chars];
+newChars.push("hiphop");
+console.log(newChars);
+let odd1= [1,3,5];
+let even1 = [2,4,6];
+let newArr8 = [...odd1,...even1];
+console.log(newArr8);
+
+const data ={
+    email:"oshimul54@gmail.com",
+    pass:"abcd",
+
+};
+const dataCopy = {...data,id:123};
+console.log(dataCopy);
+
+//Rest -- Allows a function to take an indefinite number of arguments and bundle them in an array
+
+function sum3(...args){
+    for(let i = 0; i<args.length;i++){
+        console.log("You gave us",args[i]);
+    }
+}
+sum3(1,2,3,4,5,6);
+function min(a,b,c){
+    console.log(arguments);
+}
+min(1,2,3,4);
+
+//Destructuring 
+let names = ["tony","sjo","dfsadf","dgg"];
+let [winner,runnerup,...others] = names;
+console.log(winner);
+console.log(runnerup);
+console.log(others);
+
