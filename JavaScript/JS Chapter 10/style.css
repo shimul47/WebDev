@@ -1,0 +1,11 @@
+div{
+    height:200px;
+    width:70%;
+    border: 2px solid black;
+    margin:auto;
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    text-align: center; 
+}
