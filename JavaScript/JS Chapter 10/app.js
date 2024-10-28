@@ -11,9 +11,12 @@
 //     alert("hI NAME");
 // };
 
-//this is a comment !!!!
+
 let btn6 = document.querySelector("#click");
 btn6.innerText = "Hello";
+btn6.addEventListener("click",function(){
+    console.log("welcome to this ad.....");
+});
 
 let btn = document.querySelector("button");
 btn.addEventListener("click", function(){
