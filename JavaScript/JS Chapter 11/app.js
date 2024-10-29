@@ -1,6 +1,6 @@
 let gameSeq = [];
 let userSeq = [];
-let btns = ["yellow", "red", "purple", "green"];
+let btns = ["yellow", "red", "purple", "green","blue","black"];
 let started = false;
 let level = 0;
 let h2 = document.querySelector("h2");
@@ -31,6 +31,7 @@ function levelUp() {
   let randColor = btns[randIdx];
   let randBtn = document.querySelector(`.${randColor}`);
   gameSeq.push(randColor);
+//   console.log(gameSeq);
   gameFlash(randBtn);
 }
 function checkAns(idx) {
