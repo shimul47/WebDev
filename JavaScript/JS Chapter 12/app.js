@@ -41,6 +41,7 @@ JSON.stringify(student);//js to json
 
 //api checking tools --> Hoppscpth,Postman
 //Ajax - Asynchronous JS with xml
+
 //http Verb
     /*
     get 
@@ -54,3 +55,25 @@ JSON.stringify(student);//js to json
     400 - bad request
     500 - Internal Server Error
     */
+
+let url = "https://catfact.ninja/fact";
+fetch(url)
+    .then((res)=>{
+        console.log(res);
+        res.json().then((data) =>{
+            console.log(data);
+        })
+    })
+    .catch(()=>{
+        console.log("Error");
+    });
+async function gerFacts() {
+    try{
+        let res = await fetch(url);
+        let data = await res.json();
+        console.log(res.fact);   
+    }
+    catch(e){
+        console.log(e);
+    }
+}
