@@ -30,6 +30,7 @@ app.listen(port, ()=>{
 //     let html_code="<h1>Fruit</h1><ul><li>Apple</li><li>Orange</li></ul>"
 //     res.send(html_code);
 // });
+
 app.get("/",(req,res)=>{
     res.send("You contacted root path");
 });
@@ -42,10 +43,12 @@ app.get("/",(req,res)=>{
 // app.get("*",(req,res)=>{
 //     res.send("hahaha");
 // });
+
 app.get("/:username/:id",(req,res)=>{
     let {username,id} = req.params;
     res.send(`<h1>Welcome to the page ${username}</h1><h3> Your id is ${id}</h3>`);
 });
+
 //Node mon -> automatically restart server
 
 //queary string  ::::

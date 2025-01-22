@@ -1,0 +1,11 @@
+<%- include("inclues/head.ejs") %>
+<body>
+    <h1>Dice gave value :
+        <%= diceVal %>
+    </h1>
+    <% if(diceVal == 6){ %> <!--ejs tag-->
+    <h3>Nice! Roll again</h3>
+    <% } %>
+    <%- include("inclues/footer.ejs")%>
+</body>
+</html>
