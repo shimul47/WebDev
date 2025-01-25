@@ -3,9 +3,19 @@ h1{
 }
 
 .post{
+    height:170px;
+    border-radius:15px;
+    width:300px;
+    margin:10px;
+    padding:10px;
     background-color: blanchedalmond;
+    border:2px solid black;
 }
 
 .user{
     font-style: italic;
+    font-size: 22px;
+}
+a{
+    text-decoration: none;
 }
