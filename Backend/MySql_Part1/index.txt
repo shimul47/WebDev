@@ -1,0 +1,52 @@
+
+/*
+columns -->schema
+rows --> tuple
+
+CREATE DATABASE db_name;
+CREATE DATABASE IF NOT EXISTS db_name;  (more useful)
+
+DROP DATABASE db_name;
+DROP DATABASE IF NOT EXISTS db_name; (more useful)
+
+SHOW DATABASES; will show all db exists
+
+USE db_name;
+SHOW TABLES; 
+
+data types: https://www.mysqltutorial.org/wp-content/uploads/2024/01/mysqldatatypes.jpg
+
+
+*/
+
+
+CREATE DATABASE college;
+USE college;
+CREATE TABLE board (
+	roll_no INT,
+    name VARCHAR(30),
+    age INT
+) ;
+INSERT INTO board
+VALUES
+(101,"adam",12);
+SELECT * FROM board;
+
+CREATE TABLE user (
+	id INT,
+    age INT,
+    name VARCHAR(25) NOT NULL,
+    email VARCHAR(50) UNIQUE,
+    follower INT DEFAULT 0,
+    following INT,
+    CONSTRAINT CHECK (age>=13),
+    PRIMARY KEY(id,name)
+);
+INSERT INTO user
+(id,age,name,email,follower,following)
+VALUES
+(1,14,"adam","adb@gmail.com",112,9),
+(4,16,"adm","ab@gmail.com",12,93),
+(9,19,"dam","db@gmail.com",11,59);
+
+SELECT * FROM user;
