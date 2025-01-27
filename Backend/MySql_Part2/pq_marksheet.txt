@@ -1,0 +1,52 @@
+CREATE DATABASE IF NOT EXISTS marksheet;
+create table info(
+	Roll INT primary key,
+    name varchar(25),
+    city varchar(30),
+    marks INT
+);
+
+insert into info
+(Roll,name,city,marks)
+values
+(1,"BOB","Rajshahi",97),
+(2,"Alice","Dhaka",67),
+(3,"Jack","Barishal",83),
+(4,"Robin","London",72),
+(5,"You know who","NYC",45);
+
+select * from info;
+
+select * from info
+where marks>=60;
+
+Select avg(marks)
+from info;
+
+set SQL_SAFE_UPDATES = 0;
+alter table info
+add column grade varchar(25) default "F";
+
+update info 
+set grade = "A"
+where marks>=90;
+
+update info 
+set grade = "B"
+where marks>=80 AND marks<90;
+
+update info 
+set grade = "C"
+where marks>=70 AND marks<80;
+
+update info 
+set grade = "D"
+where marks>=60 AND marks<70;
+
+update info 
+set grade = "F"
+where marks<60;
+
+select * from info;
+
+//Check out the output screenshot "marksheet.png"

@@ -1,0 +1,30 @@
+CREATE DATABASE IF NOT EXISTS my_college;
+create table teacher(
+	id INT,
+    name VARCHAR(25),
+    subject VARCHAR(15),
+    salary INT
+);
+insert into teacher
+(id,name,subject,salary)
+VALUES
+(23,"Ajay","Math",50000),
+(47,"Sumon","English",60000),
+(23,"Bijoy","Chemistry",45000),
+(23,"Priyanka","Arts",2000);
+
+select * from teacher;
+
+alter table teacher 
+add column city VARCHAR(50) default "Dhaka";
+
+alter table teacher 
+change salary ctc INT;
+
+//adding Taxes to ctc
+set SQL_SAFE_UPDATES = 0;
+update teacher
+set ctc = ctc + ctc*0.25;
+
+// you can check final table's screenshot below
+select * from teacher;

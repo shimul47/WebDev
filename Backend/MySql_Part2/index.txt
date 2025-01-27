@@ -1,0 +1,70 @@
+CREATE DATABASE college;
+USE college;
+CREATE TABLE board (
+	roll_no INT,
+    name VARCHAR(30),
+    age INT
+) ;
+INSERT INTO board
+VALUES
+(101,"adam",12);
+SELECT * FROM board;
+
+CREATE TABLE IF NOT EXISTS user (
+	id INT,
+    age INT,
+    name VARCHAR(25) NOT NULL,
+    email VARCHAR(50) UNIQUE,
+    follower INT DEFAULT 0,
+    following INT,
+    CONSTRAINT CHECK (age>=13),
+    PRIMARY KEY(id,name)
+);
+INSERT INTO user
+(id,age,name,email,follower,following)
+VALUES
+(1,14,"adam","adb@gmail.com",112,9),
+(4,16,"adm","ab@gmail.com",12,93),
+(9,19,"dam","db@gmail.com",11,59);
+
+SELECT name,age,email
+FROM user
+WHERE age >=14
+LIMIT 2;
+SELECT id,name,age,follower,following
+FROM user
+ORDER BY follower desc;
+
+SELECT max(follower)
+from user;
+
+select count(age)
+from user
+where age = 14;
+
+select sum(age)
+from user 
+where age>=7;
+
+update user 
+set follower = 600
+where age = 16;
+set SQL_SAFE_UPDATES = 0;
+select * from user;
+
+delete from user
+where age = 14;
+select * from user;
+
+alter table user 
+add column city varchar(25) default "Dhaka";
+
+alter table user
+drop column age;
+
+alter table user
+rename shimul;
+
+select * from shimul;
+ 
+TRUNCATE table shimul;
