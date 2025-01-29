@@ -8,3 +8,4 @@ create table user(
     password VARCHAR(60) not null
 );
 SELECT * from user;
+select * from user where email="abc@gmai.com";

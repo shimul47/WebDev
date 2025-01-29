@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>edit username</title>
+    <title>Edit Info</title>
 </head>
 <body>
-    <h2>s8csa</h2>
+    <h2>You are about to edit : <%=user.email%></h2>
+    <form method="post" action="/user/<%=user.id%>?_method=PATCH">
+        <textarea name="username"><%=user.username%></textarea>
+        <input type="password" name="password" placeholder="Enter password">
+        <button>Edit</button>
+    </form>
 </body>
 </html>

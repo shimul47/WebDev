@@ -3,8 +3,11 @@ const mysql = require("mysql2");
 const express = require ("express");
 const app = express();
 const path = require("path");
+const methodOverride = require("method-override");
 
 app.set("view engine","ejs");
+app.use(methodOverride("_method"));
+app.use(express.urlencoded({extended:true}));
 app.set("views",path.join(__dirname,"/views"));
 const port = 8080;
 
@@ -72,27 +75,54 @@ app.get("/user", (req,res)=>{
 });
 
 //Edit route
-
 app.get("/user/:id/edit",(req,res)=>{
-    let id = req.params;
-    let q = `SELECT * FROM user where id='${id}'`;
+    let {id} = req.params;
+    console.log(id);
+    let q = `select * from user where id="${id}"`;
     
-
     try{
         connection.query(q,(err,result) =>{
             if(err) throw err;
-            console.log(result)
-            
-            
+            // console.log(result);
+            let user = result[0];
+            res.render("edit.ejs",{user});
         
         });
     }catch(err){
         console.log(err);
         res.send(err);
     }
-    
 
 });
+
+//update route
+app.patch("/user/:id",(req,res)=>{
+    let {id} = req.params;
+    let {password: formPass, username: newUsername} = req.body;
+    console.log(id);
+    let q = `select * from user where id="${id}"`;
+    
+    try{
+        connection.query(q,(err,result) =>{
+            if(err) throw err;
+            let user = result[0];
+            if(formPass!= user.password){
+                res.send("WRONG Password");
+            }else{
+                let q2 = `UPDATE user SET username='${newUsername}' where  id='${id}'`;
+                connection.query(q2,(err,result)=>{
+                    if(err) throw err;
+                    res.redirect("/user");
+                });
+            }
+        
+        });
+    }catch(err){
+        console.log(err);
+        res.send(err);
+    }
+});
+
 // connection.end();
 
 
