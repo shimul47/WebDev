@@ -1,0 +1,8 @@
+3 types of mongo relationship
+
+1.One to One
+2.One to Many(few)
+3.Many to Many
+
+Mongo read
+#https://www.mongodb.com/blog/post/6-rules-of-thumb-for-mongodb-schema-design
