@@ -1,9 +1,13 @@
 import "./App.css"
 import ProductTab from "./ProductTab.jsx"
+import Button from "./Button.jsx"
+import Form from "./Form.jsx"
 
 function App() {
   return (
     <div>
+      <Button/>
+      <Form/>
       <h2>Best deal of the year.</h2>
       <ProductTab/>
     </div>
