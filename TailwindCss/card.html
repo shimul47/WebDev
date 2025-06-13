@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newsletter</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="mt-6 mx-52 flex flex-wrap rounded-lg border-2 border-black">
+<body class="bg-white">
 
-    <div class="w-full flex justify-center bg-blue-500 h-20 text-white items-center font-bold rounded-t">
-        <h2>News you can Trust</h2>
+  <div class="mt-25 mx-auto max-w-2xl border-2 border-black rounded-lg overflow-hidden shadow-md">
+    
+    <div class="w-full flex justify-center bg-blue-500 h-20 text-white items-center font-bold text-xl rounded-t">
+      <h2>News you can Trust</h2>
     </div>
-    <div class="text-center mt-4 w-full">
-        <div>
-            <h3 class="text-lg font-boldsemi">Stay up to date with the Latest!</h3>
-             <p>Subscribe to our newsletter for the latest news stright into your inbox</p>
-            <form class="flex flex-wrap">
-                <input class="w-full mx-52 bg-slate-200 text-center placeholder:text-sm my-4 py-2 rounded"type="text" placeholder="example@gmail.com">
-                <button class="bg-blue-500 w-full text-white mx-52 py-2 rounded-full">Subscribe now</button>
-            </form>
-            <h4 class="my-6 text-sm">We value your policy</h4>
-        </div>
-            
+    <div class="text-center mt-6 px-4">
+      <h3 class="text-lg font-semibold mb-2">Stay up to date with the Latest!</h3>
+      <p class="mb-4 text-sm">Subscribe to our newsletter for the latest news straight into your inbox</p>
+      <form class="flex flex-col gap-4 items-center px-4 sm:px-8">
+        <input 
+          class="w-full sm:w-3/4 bg-slate-200 text-center placeholder:text-sm py-2 rounded" 
+          type="email" 
+          placeholder="example@gmail.com" 
+          required
+        />
+        <button 
+          type="submit" 
+          class="bg-blue-500 w-full sm:w-3/4 text-white py-2 rounded-full hover:bg-blue-600 transition"
+        >
+          Subscribe now
+        </button>
+      </form>
+
+      <h4 class="my-6 text-sm text-gray-500">We value your privacy</h4>
     </div>
+    
+  </div>
+
 </body>
 </html>
